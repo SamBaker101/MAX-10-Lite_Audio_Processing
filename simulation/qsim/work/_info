@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/code/Max10/audio1/simulation/qsim
+vaudio1
+Z1 !s110 1629687251
+!i10b 1
+!s100 h;1AoVQ;Zc]lRCzY`3>j43
+I;LT:UQTJa`Z`gabc><J<n3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1629687250
+8audio1.vo
+Faudio1.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1629687251.000000
+!s107 audio1.vo|
+!s90 -work|work|audio1.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vaudio1_vlg_vec_tst
+R1
+!i10b 1
+!s100 ;T=ZIMf6KLEeoX_:4ST`X1
+IT5<8<A>XWP^F5X:TLI^IX2
+R2
+R0
+w1629687249
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6

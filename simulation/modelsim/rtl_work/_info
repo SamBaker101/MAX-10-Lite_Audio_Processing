@@ -1,0 +1,144 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/code/Max10/audio1/simulation/modelsim
+vaudio1
+Z1 !s110 1631225537
+!i10b 1
+!s100 Tc0Zf@Adm;RbOzfjD7a123
+I@`]=9:^LAIeYTa00d9N3G0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1631224573
+8C:/code/Max10/audio1/audio1.v
+FC:/code/Max10/audio1/audio1.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1631225537.000000
+!s107 C:/code/Max10/audio1/audio1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/code/Max10/audio1|C:/code/Max10/audio1/audio1.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/code/Max10/audio1
+Z7 tCvgOpt 0
+vclock_div
+R1
+!i10b 1
+!s100 U4aXXzH@=X>N0OEFi2Z=B1
+I^=Ua@c[?_nfb:OJ5T@3oi1
+R2
+R0
+w1629681242
+8C:/code/Max10/audio1/clock_div.v
+FC:/code/Max10/audio1/clock_div.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/code/Max10/audio1/clock_div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/code/Max10/audio1|C:/code/Max10/audio1/clock_div.v|
+!i113 1
+R5
+R6
+R7
+vi2s_decode
+R1
+!i10b 1
+!s100 odM8?A1aT8nKLfgUnH6]b3
+Ie7XBTiP24X2UYa^PLzk`C1
+R2
+R0
+w1631224788
+8C:/code/Max10/audio1/i2s_decode.v
+FC:/code/Max10/audio1/i2s_decode.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/code/Max10/audio1/i2s_decode.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/code/Max10/audio1|C:/code/Max10/audio1/i2s_decode.v|
+!i113 1
+R5
+R6
+R7
+vi2s_encode
+R1
+!i10b 1
+!s100 DaielcQc]F=gDec7Kj2]U3
+Ij`>UdnQC;WPD9g`NKB6X]1
+R2
+R0
+w1631224572
+8C:/code/Max10/audio1/i2s_encode.v
+FC:/code/Max10/audio1/i2s_encode.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/code/Max10/audio1/i2s_encode.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/code/Max10/audio1|C:/code/Max10/audio1/i2s_encode.v|
+!i113 1
+R5
+R6
+R7
+vPLL
+R1
+!i10b 1
+!s100 =DDK4L2Wh4hS9DNV^1?DM3
+IE]?AI^g?bVOEa]CE<b`SA3
+R2
+R0
+w1629599148
+8C:/code/Max10/audio1/PLL.v
+FC:/code/Max10/audio1/PLL.v
+L0 39
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/code/Max10/audio1/PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/code/Max10/audio1|C:/code/Max10/audio1/PLL.v|
+!i113 1
+R5
+R6
+R7
+n@p@l@l
+vPLL_altpll
+R1
+!i10b 1
+!s100 Vl8Q6WL`EW3R]eP5SVzS60
+ISi@D;36MhY=1jb85oYIA60
+R2
+R0
+w1629599217
+8C:/code/Max10/audio1/db/pll_altpll.v
+FC:/code/Max10/audio1/db/pll_altpll.v
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/code/Max10/audio1/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/code/Max10/audio1/db|C:/code/Max10/audio1/db/pll_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/code/Max10/audio1/db
+R7
+n@p@l@l_altpll

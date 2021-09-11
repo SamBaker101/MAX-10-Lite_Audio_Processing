@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at clock_div.v(18): always construct contains both blocking and non-blocking assignments File: C:/code/Max10/audio1/clock_div.v Line: 18
