@@ -3,7 +3,7 @@
  
  In preperation for a future project I wanted to set up an environment to experiment with digital signal processing on FPGA. I am using a DE10-Lite FPGA from Altera with a 24 bit I2S based DAC/ADC Pmod from Diligent.
  
- #Modules 
+ # Modules 
  
  Audio_Top - Top level module for this project 
  
