@@ -23,7 +23,7 @@ always @(posedge SCLK)
 		data_out_R <= data_R;
 		end
 	
-	if (count < RESOLUTION) begin
+	else if (count < RESOLUTION) begin
 		if (LRCK == 0)
 			data_L[count] <= data_in;
 		else

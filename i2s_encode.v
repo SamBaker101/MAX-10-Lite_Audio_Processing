@@ -7,6 +7,7 @@ module i2s_encode
 );
 
 reg [31:0] count;
+reg [RESOLUTION-1:0] data_buf;
 reg LR;
 
 always @(negedge SCLK)
@@ -18,14 +19,13 @@ always @(negedge SCLK)
 		begin
 		count <= 32'd0;
 		LR <= LRCK;
-		end
-	
-	if (count < RESOLUTION) begin
 		if (LRCK == 0)
-			data_out <= data_in_L[count];
+			data_buf <= data_in_L;
 		else
-			data_out <= data_in_R[count];
+			data_buf <= data_in_R;
 		end
+	else if (count < RESOLUTION)
+		data_out <= data_buf[count];
 	
 	end
 endmodule
