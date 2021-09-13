@@ -56,10 +56,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[0]",
-					"strict" : false
-				},
-				{
 					"name" : "GPIO3",
 					"strict" : false
 				}

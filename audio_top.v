@@ -38,9 +38,15 @@ i2s_encode #(32) enc (.SCLK(SCLK), .LRCK(LRCK), .data_in_L(data_L_out), .data_in
 
 	
 //Filters and Effects
-clipping #(32) clipL (.clk(data_CLK), .enable(SW[0]), .data_in(data_L_in), .data_out(data_L_out));
-clipping #(32) clipR (.clk(data_CLK), .enable(SW[0]), .data_in(data_R_in), .data_out(data_R_out));
 
+//Clipping - Bit shifts data left by 1 causing increased volume and distortion
+clipping #(32) clipL (.clk(data_CLK), .enable(SW[0]), .data_in(data_L_in), .data_out(L1));
+clipping #(32) clipR (.clk(data_CLK), .enable(SW[0]), .data_in(data_R_in), .data_out(R1));
+
+//Echo
+wire [31:0] L1, R1;
+//echo #(.RESOLUTION(32), .DEPTH(128)) eL (.clk(data_CLK), .enable(SW[1]), .data_in(L1), .data_out(data_L_out));
+//echo #(.RESOLUTION(32), .DEPTH(128)) eR (.clk(data_CLK), .enable(SW[1]), .data_in(R1), .data_out(data_R_out));
 
 
 //TESTS
@@ -48,8 +54,8 @@ clipping #(32) clipR (.clk(data_CLK), .enable(SW[0]), .data_in(data_R_in), .data
 //assign LEDR[1] = locked;
 //assign GPIO4 = GPIO3;                                                             //direct bypass test
 assign LEDR[9:0] = data_L_in[31:22];                                                  //data_test
-//bypass #(32) bp1 (.data_in(data_L_in), .data_out(data_L_out));
-//bypass #(32) bp2 (.data_in(data_R_in), .data_out(data_R_out));
+bypass #(32) bp1 (.data_in(data_L_in), .data_out(data_L_out));
+bypass #(32) bp2 (.data_in(data_R_in), .data_out(data_R_out));
 
 
 
