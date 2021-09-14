@@ -13,4 +13,6 @@
  
  Encode - Takes audio data and outputs I2S bitstream 
  
+ Flip_Flop_Data - Delays output by one sample (62 microseconds) to allow signal time to travel through circuit
+ 
  Clipping - Shifts audio sample left by one bit creating distortion 
