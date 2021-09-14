@@ -35,8 +35,9 @@ wire [31:0] data_L, data_R;
 i2s_decode #(32) dec (.SCLK(SCLK), .LRCK(LRCK), .data_in(GPIO3), .data_out_L(data_L_in), .data_out_R(data_R_in));
 i2s_encode #(32) enc (.SCLK(SCLK), .LRCK(LRCK), .data_in_L(data_L_out), .data_in_R(data_R_out), .data_out(GPIO4));
 
-flip_flop_data #(32) bp1 (.clk(data_CLK), .data_in(data_L_in), .data_out(data_L_out));
-flip_flop_data #(32) bp2 (.clk(data_CLK), .data_in(data_R_in), .data_out(data_R_out));
+wire [31:0] L2, R2;
+flip_flop_data #(32) bp1 (.clk(!data_CLK), .data_in(L2), .data_out(data_L_out));
+flip_flop_data #(32) bp2 (.clk(!data_CLK), .data_in(R2), .data_out(data_R_out));
 
 	
 //Filters and Effects
@@ -47,8 +48,8 @@ clipping #(32) clipR (.clk(data_CLK), .enable(SW[0]), .data_in(data_R_in), .data
 
 //Echo
 wire [31:0] L1, R1;
-//echo #(.RESOLUTION(32), .DEPTH(128)) eL (.clk(data_CLK), .enable(SW[1]), .data_in(L1), .data_out(data_L_out));
-//echo #(.RESOLUTION(32), .DEPTH(128)) eR (.clk(data_CLK), .enable(SW[1]), .data_in(R1), .data_out(data_R_out));
+echo #(.RESOLUTION(32), .DEPTH(1024)) eL (.clk(data_CLK), .enable(SW[1]), .data_in(L1), .data_out(L2));
+echo #(.RESOLUTION(32), .DEPTH(1024)) eR (.clk(data_CLK), .enable(SW[1]), .data_in(R1), .data_out(R2));
 
 
 //TESTS
