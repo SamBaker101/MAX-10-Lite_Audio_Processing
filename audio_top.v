@@ -35,6 +35,8 @@ wire [31:0] data_L, data_R;
 i2s_decode #(32) dec (.SCLK(SCLK), .LRCK(LRCK), .data_in(GPIO3), .data_out_L(data_L_in), .data_out_R(data_R_in));
 i2s_encode #(32) enc (.SCLK(SCLK), .LRCK(LRCK), .data_in_L(data_L_out), .data_in_R(data_R_out), .data_out(GPIO4));
 
+flip_flop_data #(32) bp1 (.clk(data_CLK), .data_in(data_L_in), .data_out(data_L_out));
+flip_flop_data #(32) bp2 (.clk(data_CLK), .data_in(data_R_in), .data_out(data_R_out));
 
 	
 //Filters and Effects
@@ -54,8 +56,7 @@ wire [31:0] L1, R1;
 //assign LEDR[1] = locked;
 //assign GPIO4 = GPIO3;                                                             //direct bypass test
 assign LEDR[9:0] = data_L_in[31:22];                                                  //data_test
-bypass #(32) bp1 (.data_in(data_L_in), .data_out(data_L_out));
-bypass #(32) bp2 (.data_in(data_R_in), .data_out(data_R_out));
+
 
 
 

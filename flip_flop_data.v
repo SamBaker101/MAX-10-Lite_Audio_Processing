@@ -1,4 +1,4 @@
-module bypass
+module flip_flop_data
 	#(parameter RESOLUTION = 24)
 	(
 	input clk,

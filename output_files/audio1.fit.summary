@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sun Sep 12 22:44:17 2021
+Fitter Status : Successful - Tue Sep 14 17:47:50 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : audio1
 Top-level Entity Name : audio_top
 Family : MAX 10
 Device : 10M50DAF484I7G
 Timing Models : Final
-Total logic elements : 367 / 49,760 ( < 1 % )
-    Total combinational functions : 311 / 49,760 ( < 1 % )
-    Dedicated logic registers : 293 / 49,760 ( < 1 % )
-Total registers : 293
+Total logic elements : 547 / 49,760 ( 1 % )
+    Total combinational functions : 353 / 49,760 ( < 1 % )
+    Dedicated logic registers : 454 / 49,760 ( < 1 % )
+Total registers : 454
 Total pins : 29 / 360 ( 8 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
