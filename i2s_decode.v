@@ -5,7 +5,7 @@ module i2s_decode
 	output reg[RESOLUTION-1:0] data_out_L, data_out_R
 );
 
-reg [31:0] count;
+reg [RESOLUTION-1:0] count;
 reg LR;
 reg [RESOLUTION-1:0] data_L, data_R;
 
@@ -17,7 +17,7 @@ always @(posedge SCLK)
 
 	if (LR != LRCK)
 		begin
-		count <= 32'd0;
+		count <= 0;
 		LR <= LRCK;
 		data_out_L <= data_L;
 		data_out_R <= data_R;
@@ -25,9 +25,9 @@ always @(posedge SCLK)
 	
 	else if (count < RESOLUTION) begin
 		if (LRCK == 0)
-			data_L[count] <= data_in;
+			data_L[RESOLUTION-1-count] <= data_in;
 		else
-			data_R[count] <= data_in;
+			data_R[RESOLUTION-1-count] <= data_in;
 		end
 	
 	end

@@ -7,6 +7,6 @@ module clipping
 
 );
 
-assign data_out = enable ? data_in<<1 : data_in;
+assign data_out = enable ? data_in<<4 : data_in;
 
 endmodule

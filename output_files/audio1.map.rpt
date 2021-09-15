@@ -1,5 +1,5 @@
 Analysis & Synthesis report for audio1
-Tue Sep 14 18:19:07 2021
+Tue Sep 14 22:16:54 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -17,31 +17,32 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   9. Analysis & Synthesis IP Cores Summary
  10. General Register Statistics
  11. Registers Packed Into Inferred Megafunctions
- 12. Source assignments for echo:eR|altshift_taps:buffer_rtl_0|shift_taps_77m:auto_generated|altsyncram_2581:altsyncram2
- 13. Parameter Settings for User Entity Instance: PLL:PL0|altpll:altpll_component
- 14. Parameter Settings for User Entity Instance: clock_div:clk0
- 15. Parameter Settings for User Entity Instance: clock_div:clk1
- 16. Parameter Settings for User Entity Instance: clock_div:clk2
- 17. Parameter Settings for User Entity Instance: clock_div:clk3
- 18. Parameter Settings for User Entity Instance: i2s_decode:dec
- 19. Parameter Settings for User Entity Instance: i2s_encode:enc
- 20. Parameter Settings for User Entity Instance: flip_flop_data:bp1
- 21. Parameter Settings for User Entity Instance: flip_flop_data:bp2
- 22. Parameter Settings for User Entity Instance: clipping:clipL
- 23. Parameter Settings for User Entity Instance: clipping:clipR
- 24. Parameter Settings for User Entity Instance: echo:eL
- 25. Parameter Settings for User Entity Instance: echo:eR
- 26. Parameter Settings for Inferred Entity Instance: echo:eR|altshift_taps:buffer_rtl_0
- 27. altpll Parameter Settings by Entity Instance
- 28. altshift_taps Parameter Settings by Entity Instance
- 29. Port Connectivity Checks: "clock_div:clk3"
- 30. Port Connectivity Checks: "clock_div:clk2"
- 31. Port Connectivity Checks: "clock_div:clk1"
- 32. Port Connectivity Checks: "clock_div:clk0"
- 33. Port Connectivity Checks: "PLL:PL0"
- 34. Post-Synthesis Netlist Statistics for Top Partition
- 35. Elapsed Time Per Partition
- 36. Analysis & Synthesis Messages
+ 12. Source assignments for echo:eR|altshift_taps:buffer_rtl_0|shift_taps_07m:auto_generated|altsyncram_k481:altsyncram2
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |audio_top
+ 14. Parameter Settings for User Entity Instance: PLL:PL0|altpll:altpll_component
+ 15. Parameter Settings for User Entity Instance: clock_div:clk0
+ 16. Parameter Settings for User Entity Instance: clock_div:clk1
+ 17. Parameter Settings for User Entity Instance: clock_div:clk2
+ 18. Parameter Settings for User Entity Instance: clock_div:clk3
+ 19. Parameter Settings for User Entity Instance: i2s_decode:dec
+ 20. Parameter Settings for User Entity Instance: i2s_encode:enc
+ 21. Parameter Settings for User Entity Instance: flip_flop_data:bp1
+ 22. Parameter Settings for User Entity Instance: flip_flop_data:bp2
+ 23. Parameter Settings for User Entity Instance: clipping:clipL
+ 24. Parameter Settings for User Entity Instance: clipping:clipR
+ 25. Parameter Settings for User Entity Instance: echo:eL
+ 26. Parameter Settings for User Entity Instance: echo:eR
+ 27. Parameter Settings for Inferred Entity Instance: echo:eR|altshift_taps:buffer_rtl_0
+ 28. altpll Parameter Settings by Entity Instance
+ 29. altshift_taps Parameter Settings by Entity Instance
+ 30. Port Connectivity Checks: "clock_div:clk3"
+ 31. Port Connectivity Checks: "clock_div:clk2"
+ 32. Port Connectivity Checks: "clock_div:clk1"
+ 33. Port Connectivity Checks: "clock_div:clk0"
+ 34. Port Connectivity Checks: "PLL:PL0"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
 
 
 
@@ -67,18 +68,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 14 18:19:07 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 14 22:16:54 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; audio1                                      ;
 ; Top-level Entity Name              ; audio_top                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 698                                         ;
-;     Total combinational functions  ; 504                                         ;
-;     Dedicated logic registers      ; 528                                         ;
-; Total registers                    ; 528                                         ;
+; Total logic elements               ; 607                                         ;
+;     Total combinational functions  ; 461                                         ;
+;     Dedicated logic registers      ; 432                                         ;
+; Total registers                    ; 432                                         ;
 ; Total pins                         ; 29                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 57,232                                      ;
+; Total memory bits                  ; 40,880                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 1                                           ;
 ; UFM blocks                         ; 0                                           ;
@@ -186,8 +187,7 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -215,8 +215,8 @@ refer to the applicable agreement for further details.
 ; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
 ; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
-; db/shift_taps_77m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/code/Max10/audio1/db/shift_taps_77m.tdf                               ;         ;
-; db/altsyncram_2581.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/code/Max10/audio1/db/altsyncram_2581.tdf                              ;         ;
+; db/shift_taps_07m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/code/Max10/audio1/db/shift_taps_07m.tdf                               ;         ;
+; db/altsyncram_k481.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/code/Max10/audio1/db/altsyncram_k481.tdf                              ;         ;
 ; db/cntr_t9f.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/code/Max10/audio1/db/cntr_t9f.tdf                                     ;         ;
 ; db/cmpr_tsb.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/code/Max10/audio1/db/cmpr_tsb.tdf                                     ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
@@ -227,24 +227,24 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 698                    ;
+; Estimated Total logic elements              ; 607                    ;
 ;                                             ;                        ;
-; Total combinational functions               ; 504                    ;
+; Total combinational functions               ; 461                    ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 143                    ;
-;     -- 3 input functions                    ; 173                    ;
-;     -- <=2 input functions                  ; 188                    ;
+;     -- 4 input functions                    ; 134                    ;
+;     -- 3 input functions                    ; 119                    ;
+;     -- <=2 input functions                  ; 208                    ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 277                    ;
-;     -- arithmetic mode                      ; 227                    ;
+;     -- normal mode                          ; 237                    ;
+;     -- arithmetic mode                      ; 224                    ;
 ;                                             ;                        ;
-; Total registers                             ; 528                    ;
-;     -- Dedicated logic registers            ; 528                    ;
+; Total registers                             ; 432                    ;
+;     -- Dedicated logic registers            ; 432                    ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
 ; I/O pins                                    ; 29                     ;
-; Total memory bits                           ; 57232                  ;
+; Total memory bits                           ; 40880                  ;
 ;                                             ;                        ;
 ; Embedded Multiplier 9-bit elements          ; 0                      ;
 ;                                             ;                        ;
@@ -252,9 +252,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                      ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; clock_div:clk0|div_clk ;
-; Maximum fan-out                             ; 294                    ;
-; Total fan-out                               ; 3683                   ;
-; Average fan-out                             ; 3.21                   ;
+; Maximum fan-out                             ; 246                    ;
+; Total fan-out                               ; 3059                   ;
+; Average fan-out                             ; 3.08                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -263,26 +263,26 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                       ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |audio_top                                ; 504 (0)             ; 528 (0)                   ; 57232       ; 0          ; 0            ; 0       ; 0         ; 29   ; 0            ; 0          ; |audio_top                                                                                                ; audio_top       ; work         ;
+; |audio_top                                ; 461 (0)             ; 432 (0)                   ; 40880       ; 0          ; 0            ; 0       ; 0         ; 29   ; 0            ; 0          ; |audio_top                                                                                                ; audio_top       ; work         ;
 ;    |PLL:PL0|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|PLL:PL0                                                                                        ; PLL             ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|PLL:PL0|altpll:altpll_component                                                                ; altpll          ; work         ;
 ;          |PLL_altpll:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|PLL:PL0|altpll:altpll_component|PLL_altpll:auto_generated                                      ; PLL_altpll      ; work         ;
-;    |clipping:clipL|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|clipping:clipL                                                                                 ; clipping        ; work         ;
-;    |clipping:clipR|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|clipping:clipR                                                                                 ; clipping        ; work         ;
+;    |clipping:clipL|                       ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|clipping:clipL                                                                                 ; clipping        ; work         ;
+;    |clipping:clipR|                       ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|clipping:clipR                                                                                 ; clipping        ; work         ;
 ;    |clock_div:clk0|                       ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|clock_div:clk0                                                                                 ; clock_div       ; work         ;
 ;    |clock_div:clk1|                       ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|clock_div:clk1                                                                                 ; clock_div       ; work         ;
 ;    |clock_div:clk2|                       ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|clock_div:clk2                                                                                 ; clock_div       ; work         ;
-;    |echo:eL|                              ; 32 (32)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eL                                                                                        ; echo            ; work         ;
-;    |echo:eR|                              ; 56 (32)             ; 42 (32)                   ; 57232       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR                                                                                        ; echo            ; work         ;
-;       |altshift_taps:buffer_rtl_0|        ; 24 (0)              ; 10 (0)                    ; 57232       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR|altshift_taps:buffer_rtl_0                                                             ; altshift_taps   ; work         ;
-;          |shift_taps_77m:auto_generated|  ; 24 (0)              ; 10 (0)                    ; 57232       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR|altshift_taps:buffer_rtl_0|shift_taps_77m:auto_generated                               ; shift_taps_77m  ; work         ;
-;             |altsyncram_2581:altsyncram2| ; 0 (0)               ; 0 (0)                     ; 57232       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR|altshift_taps:buffer_rtl_0|shift_taps_77m:auto_generated|altsyncram_2581:altsyncram2   ; altsyncram_2581 ; work         ;
-;             |cntr_t9f:cntr1|              ; 24 (21)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR|altshift_taps:buffer_rtl_0|shift_taps_77m:auto_generated|cntr_t9f:cntr1                ; cntr_t9f        ; work         ;
-;                |cmpr_tsb:cmpr4|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR|altshift_taps:buffer_rtl_0|shift_taps_77m:auto_generated|cntr_t9f:cntr1|cmpr_tsb:cmpr4 ; cmpr_tsb        ; work         ;
-;    |flip_flop_data:bp1|                   ; 0 (0)               ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|flip_flop_data:bp1                                                                             ; flip_flop_data  ; work         ;
-;    |flip_flop_data:bp2|                   ; 0 (0)               ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|flip_flop_data:bp2                                                                             ; flip_flop_data  ; work         ;
-;    |i2s_decode:dec|                       ; 124 (124)           ; 161 (161)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|i2s_decode:dec                                                                                 ; i2s_decode      ; work         ;
-;    |i2s_encode:enc|                       ; 96 (96)             ; 66 (66)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|i2s_encode:enc                                                                                 ; i2s_encode      ; work         ;
+;    |echo:eL|                              ; 24 (24)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eL                                                                                        ; echo            ; work         ;
+;    |echo:eR|                              ; 48 (24)             ; 34 (24)                   ; 40880       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR                                                                                        ; echo            ; work         ;
+;       |altshift_taps:buffer_rtl_0|        ; 24 (0)              ; 10 (0)                    ; 40880       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR|altshift_taps:buffer_rtl_0                                                             ; altshift_taps   ; work         ;
+;          |shift_taps_07m:auto_generated|  ; 24 (0)              ; 10 (0)                    ; 40880       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR|altshift_taps:buffer_rtl_0|shift_taps_07m:auto_generated                               ; shift_taps_07m  ; work         ;
+;             |altsyncram_k481:altsyncram2| ; 0 (0)               ; 0 (0)                     ; 40880       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR|altshift_taps:buffer_rtl_0|shift_taps_07m:auto_generated|altsyncram_k481:altsyncram2   ; altsyncram_k481 ; work         ;
+;             |cntr_t9f:cntr1|              ; 24 (21)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR|altshift_taps:buffer_rtl_0|shift_taps_07m:auto_generated|cntr_t9f:cntr1                ; cntr_t9f        ; work         ;
+;                |cmpr_tsb:cmpr4|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|echo:eR|altshift_taps:buffer_rtl_0|shift_taps_07m:auto_generated|cntr_t9f:cntr1|cmpr_tsb:cmpr4 ; cmpr_tsb        ; work         ;
+;    |flip_flop_data:bp1|                   ; 0 (0)               ; 48 (48)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|flip_flop_data:bp1                                                                             ; flip_flop_data  ; work         ;
+;    |flip_flop_data:bp2|                   ; 0 (0)               ; 48 (48)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|flip_flop_data:bp2                                                                             ; flip_flop_data  ; work         ;
+;    |i2s_decode:dec|                       ; 125 (125)           ; 121 (121)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|i2s_decode:dec                                                                                 ; i2s_decode      ; work         ;
+;    |i2s_encode:enc|                       ; 84 (84)             ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|i2s_encode:enc                                                                                 ; i2s_encode      ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -292,7 +292,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 ; Name                                                                                                    ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
 +---------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; echo:eR|altshift_taps:buffer_rtl_0|shift_taps_77m:auto_generated|altsyncram_2581:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1022         ; 56           ; 1022         ; 56           ; 57232 ; None ;
+; echo:eR|altshift_taps:buffer_rtl_0|shift_taps_07m:auto_generated|altsyncram_k481:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1022         ; 40           ; 1022         ; 40           ; 40880 ; None ;
 +---------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
@@ -310,12 +310,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 528   ;
-; Number of registers using Synchronous Clear  ; 160   ;
-; Number of registers using Synchronous Load   ; 64    ;
+; Total registers                              ; 432   ;
+; Number of registers using Synchronous Clear  ; 152   ;
+; Number of registers using Synchronous Load   ; 48    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 108   ;
+; Number of registers using Clock Enable       ; 84    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -325,18 +325,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------+----------------------+------------+
 ; Register Name                  ; Megafunction         ; Type       ;
 +--------------------------------+----------------------+------------+
-; echo:eR|buffer[0..1023][4..31] ; echo:eR|buffer_rtl_0 ; SHIFT_TAPS ;
-; echo:eL|buffer[0..1023][4..31] ; echo:eR|buffer_rtl_0 ; SHIFT_TAPS ;
+; echo:eR|buffer[0..1023][4..23] ; echo:eR|buffer_rtl_0 ; SHIFT_TAPS ;
+; echo:eL|buffer[0..1023][4..23] ; echo:eR|buffer_rtl_0 ; SHIFT_TAPS ;
 +--------------------------------+----------------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; Source assignments for echo:eR|altshift_taps:buffer_rtl_0|shift_taps_77m:auto_generated|altsyncram_2581:altsyncram2 ;
+; Source assignments for echo:eR|altshift_taps:buffer_rtl_0|shift_taps_07m:auto_generated|altsyncram_k481:altsyncram2 ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                    ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |audio_top ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; RESOLUTION     ; 24    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------+
@@ -758,7 +768,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; RESOLUTION     ; 32    ; Signed Integer                     ;
+; RESOLUTION     ; 24    ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -768,7 +778,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; RESOLUTION     ; 32    ; Signed Integer                     ;
+; RESOLUTION     ; 24    ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -778,7 +788,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------+
 ; Parameter Name ; Value ; Type                                   ;
 +----------------+-------+----------------------------------------+
-; RESOLUTION     ; 32    ; Signed Integer                         ;
+; RESOLUTION     ; 24    ; Signed Integer                         ;
 +----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -788,7 +798,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------+
 ; Parameter Name ; Value ; Type                                   ;
 +----------------+-------+----------------------------------------+
-; RESOLUTION     ; 32    ; Signed Integer                         ;
+; RESOLUTION     ; 24    ; Signed Integer                         ;
 +----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -798,7 +808,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; RESOLUTION     ; 32    ; Signed Integer                     ;
+; RESOLUTION     ; 24    ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -808,7 +818,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; RESOLUTION     ; 32    ; Signed Integer                     ;
+; RESOLUTION     ; 24    ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -818,7 +828,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------+
 ; Parameter Name ; Value ; Type                        ;
 +----------------+-------+-----------------------------+
-; RESOLUTION     ; 32    ; Signed Integer              ;
+; RESOLUTION     ; 24    ; Signed Integer              ;
 ; DEPTH          ; 1024  ; Signed Integer              ;
 +----------------+-------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -829,7 +839,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------+
 ; Parameter Name ; Value ; Type                        ;
 +----------------+-------+-----------------------------+
-; RESOLUTION     ; 32    ; Signed Integer              ;
+; RESOLUTION     ; 24    ; Signed Integer              ;
 ; DEPTH          ; 1024  ; Signed Integer              ;
 +----------------+-------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -843,9 +853,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA  ; 1              ; Untyped                                           ;
 ; NUMBER_OF_TAPS ; 1              ; Untyped                                           ;
 ; TAP_DISTANCE   ; 1024           ; Untyped                                           ;
-; WIDTH          ; 56             ; Untyped                                           ;
+; WIDTH          ; 40             ; Untyped                                           ;
 ; POWER_UP_STATE ; CLEARED        ; Untyped                                           ;
-; CBXI_PARAMETER ; shift_taps_77m ; Untyped                                           ;
+; CBXI_PARAMETER ; shift_taps_07m ; Untyped                                           ;
 +----------------+----------------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -876,7 +886,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance            ; echo:eR|altshift_taps:buffer_rtl_0 ;
 ;     -- NUMBER_OF_TAPS      ; 1                                  ;
 ;     -- TAP_DISTANCE        ; 1024                               ;
-;     -- WIDTH               ; 56                                 ;
+;     -- WIDTH               ; 40                                 ;
 +----------------------------+------------------------------------+
 
 
@@ -933,26 +943,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 29                          ;
-; cycloneiii_ff         ; 528                         ;
-;     ENA               ; 108                         ;
-;     SCLR              ; 160                         ;
-;     SLD               ; 64                          ;
-;     plain             ; 196                         ;
-; cycloneiii_lcell_comb ; 505                         ;
-;     arith             ; 227                         ;
-;         2 data inputs ; 171                         ;
-;         3 data inputs ; 56                          ;
-;     normal            ; 278                         ;
-;         0 data inputs ; 2                           ;
+; cycloneiii_ff         ; 432                         ;
+;     ENA               ; 84                          ;
+;     SCLR              ; 152                         ;
+;     SLD               ; 48                          ;
+;     plain             ; 148                         ;
+; cycloneiii_lcell_comb ; 462                         ;
+;     arith             ; 224                         ;
+;         2 data inputs ; 184                         ;
+;         3 data inputs ; 40                          ;
+;     normal            ; 238                         ;
+;         0 data inputs ; 3                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 117                         ;
-;         4 data inputs ; 143                         ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 79                          ;
+;         4 data inputs ; 134                         ;
 ; cycloneiii_pll        ; 1                           ;
-; cycloneiii_ram_block  ; 56                          ;
+; cycloneiii_ram_block  ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.14                        ;
+; Max LUT depth         ; 7.10                        ;
+; Average LUT depth     ; 3.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -961,7 +971,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -971,7 +981,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Sep 14 18:18:43 2021
+    Info: Processing started: Tue Sep 14 22:16:35 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off audio1 -c audio1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -993,10 +1003,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file flip_fl
     Info (12023): Found entity 1: flip_flop_data File: C:/code/Max10/audio1/flip_flop_data.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at clock_div.v(9): created implicit net for "count_test" File: C:/code/Max10/audio1/clock_div.v Line: 9
 Info (12127): Elaborating entity "audio_top" for the top level hierarchy
-Warning (10034): Output port "GPIO5" at audio_top.v(6) has no driver File: C:/code/Max10/audio1/audio_top.v Line: 6
-Warning (10034): Output port "GPIO6" at audio_top.v(6) has no driver File: C:/code/Max10/audio1/audio_top.v Line: 6
-Warning (10034): Output port "GPIO7" at audio_top.v(6) has no driver File: C:/code/Max10/audio1/audio_top.v Line: 6
-Info (12128): Elaborating entity "PLL" for hierarchy "PLL:PL0" File: C:/code/Max10/audio1/audio_top.v Line: 24
+Warning (10230): Verilog HDL assignment warning at audio_top.v(61): truncated value with size 10 to match size of target (9) File: C:/code/Max10/audio1/audio_top.v Line: 61
+Warning (10034): Output port "GPIO5" at audio_top.v(8) has no driver File: C:/code/Max10/audio1/audio_top.v Line: 8
+Warning (10034): Output port "GPIO6" at audio_top.v(8) has no driver File: C:/code/Max10/audio1/audio_top.v Line: 8
+Warning (10034): Output port "GPIO7" at audio_top.v(8) has no driver File: C:/code/Max10/audio1/audio_top.v Line: 8
+Info (12128): Elaborating entity "PLL" for hierarchy "PLL:PL0" File: C:/code/Max10/audio1/audio_top.v Line: 26
 Info (12128): Elaborating entity "altpll" for hierarchy "PLL:PL0|altpll:altpll_component" File: C:/code/Max10/audio1/PLL.v Line: 103
 Info (12130): Elaborated megafunction instantiation "PLL:PL0|altpll:altpll_component" File: C:/code/Max10/audio1/PLL.v Line: 103
 Info (12133): Instantiated megafunction "PLL:PL0|altpll:altpll_component" with the following parameter: File: C:/code/Max10/audio1/PLL.v Line: 103
@@ -1058,45 +1069,46 @@ Info (12133): Instantiated megafunction "PLL:PL0|altpll:altpll_component" with t
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: PLL_altpll File: C:/code/Max10/audio1/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:PL0|altpll:altpll_component|PLL_altpll:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "clock_div" for hierarchy "clock_div:clk0" File: C:/code/Max10/audio1/audio_top.v Line: 25
+Info (12128): Elaborating entity "clock_div" for hierarchy "clock_div:clk0" File: C:/code/Max10/audio1/audio_top.v Line: 27
 Warning (10036): Verilog HDL or VHDL warning at clock_div.v(9): object "count_test" assigned a value but never read File: C:/code/Max10/audio1/clock_div.v Line: 9
 Warning (10230): Verilog HDL assignment warning at clock_div.v(9): truncated value with size 32 to match size of target (1) File: C:/code/Max10/audio1/clock_div.v Line: 9
-Info (12128): Elaborating entity "clock_div" for hierarchy "clock_div:clk1" File: C:/code/Max10/audio1/audio_top.v Line: 26
+Info (12128): Elaborating entity "clock_div" for hierarchy "clock_div:clk1" File: C:/code/Max10/audio1/audio_top.v Line: 28
 Warning (10036): Verilog HDL or VHDL warning at clock_div.v(9): object "count_test" assigned a value but never read File: C:/code/Max10/audio1/clock_div.v Line: 9
 Warning (10230): Verilog HDL assignment warning at clock_div.v(9): truncated value with size 32 to match size of target (1) File: C:/code/Max10/audio1/clock_div.v Line: 9
-Info (12128): Elaborating entity "clock_div" for hierarchy "clock_div:clk2" File: C:/code/Max10/audio1/audio_top.v Line: 27
+Info (12128): Elaborating entity "clock_div" for hierarchy "clock_div:clk2" File: C:/code/Max10/audio1/audio_top.v Line: 29
 Warning (10036): Verilog HDL or VHDL warning at clock_div.v(9): object "count_test" assigned a value but never read File: C:/code/Max10/audio1/clock_div.v Line: 9
 Warning (10230): Verilog HDL assignment warning at clock_div.v(9): truncated value with size 32 to match size of target (1) File: C:/code/Max10/audio1/clock_div.v Line: 9
-Info (12128): Elaborating entity "clock_div" for hierarchy "clock_div:clk3" File: C:/code/Max10/audio1/audio_top.v Line: 28
+Info (12128): Elaborating entity "clock_div" for hierarchy "clock_div:clk3" File: C:/code/Max10/audio1/audio_top.v Line: 30
 Warning (10036): Verilog HDL or VHDL warning at clock_div.v(9): object "count_test" assigned a value but never read File: C:/code/Max10/audio1/clock_div.v Line: 9
 Warning (10230): Verilog HDL assignment warning at clock_div.v(9): truncated value with size 32 to match size of target (1) File: C:/code/Max10/audio1/clock_div.v Line: 9
-Info (12128): Elaborating entity "i2s_decode" for hierarchy "i2s_decode:dec" File: C:/code/Max10/audio1/audio_top.v Line: 35
-Info (12128): Elaborating entity "i2s_encode" for hierarchy "i2s_encode:enc" File: C:/code/Max10/audio1/audio_top.v Line: 36
-Info (12128): Elaborating entity "flip_flop_data" for hierarchy "flip_flop_data:bp1" File: C:/code/Max10/audio1/audio_top.v Line: 39
-Info (12128): Elaborating entity "clipping" for hierarchy "clipping:clipL" File: C:/code/Max10/audio1/audio_top.v Line: 46
-Info (12128): Elaborating entity "echo" for hierarchy "echo:eL" File: C:/code/Max10/audio1/audio_top.v Line: 51
+Info (12128): Elaborating entity "i2s_decode" for hierarchy "i2s_decode:dec" File: C:/code/Max10/audio1/audio_top.v Line: 37
+Warning (10230): Verilog HDL assignment warning at i2s_decode.v(16): truncated value with size 32 to match size of target (24) File: C:/code/Max10/audio1/i2s_decode.v Line: 16
+Info (12128): Elaborating entity "i2s_encode" for hierarchy "i2s_encode:enc" File: C:/code/Max10/audio1/audio_top.v Line: 38
+Info (12128): Elaborating entity "flip_flop_data" for hierarchy "flip_flop_data:bp1" File: C:/code/Max10/audio1/audio_top.v Line: 41
+Info (12128): Elaborating entity "clipping" for hierarchy "clipping:clipL" File: C:/code/Max10/audio1/audio_top.v Line: 48
+Info (12128): Elaborating entity "echo" for hierarchy "echo:eL" File: C:/code/Max10/audio1/audio_top.v Line: 53
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "echo:eR|buffer_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
         Info (286033): Parameter TAP_DISTANCE set to 1024
-        Info (286033): Parameter WIDTH set to 56
+        Info (286033): Parameter WIDTH set to 40
 Info (12130): Elaborated megafunction instantiation "echo:eR|altshift_taps:buffer_rtl_0"
 Info (12133): Instantiated megafunction "echo:eR|altshift_taps:buffer_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
     Info (12134): Parameter "TAP_DISTANCE" = "1024"
-    Info (12134): Parameter "WIDTH" = "56"
-Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_77m.tdf
-    Info (12023): Found entity 1: shift_taps_77m File: C:/code/Max10/audio1/db/shift_taps_77m.tdf Line: 26
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2581.tdf
-    Info (12023): Found entity 1: altsyncram_2581 File: C:/code/Max10/audio1/db/altsyncram_2581.tdf Line: 27
+    Info (12134): Parameter "WIDTH" = "40"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_07m.tdf
+    Info (12023): Found entity 1: shift_taps_07m File: C:/code/Max10/audio1/db/shift_taps_07m.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k481.tdf
+    Info (12023): Found entity 1: altsyncram_k481 File: C:/code/Max10/audio1/db/altsyncram_k481.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_t9f.tdf
     Info (12023): Found entity 1: cntr_t9f File: C:/code/Max10/audio1/db/cntr_t9f.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_tsb.tdf
     Info (12023): Found entity 1: cmpr_tsb File: C:/code/Max10/audio1/db/cmpr_tsb.tdf Line: 22
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "GPIO5" is stuck at GND File: C:/code/Max10/audio1/audio_top.v Line: 6
-    Warning (13410): Pin "GPIO6" is stuck at GND File: C:/code/Max10/audio1/audio_top.v Line: 6
-    Warning (13410): Pin "GPIO7" is stuck at GND File: C:/code/Max10/audio1/audio_top.v Line: 6
+    Warning (13410): Pin "GPIO5" is stuck at GND File: C:/code/Max10/audio1/audio_top.v Line: 8
+    Warning (13410): Pin "GPIO6" is stuck at GND File: C:/code/Max10/audio1/audio_top.v Line: 8
+    Warning (13410): Pin "GPIO7" is stuck at GND File: C:/code/Max10/audio1/audio_top.v Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "Sequence" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Sequence -section_id Top was ignored
@@ -1201,24 +1213,24 @@ Warning (20013): Ignored 24 assignments for entity "pwm_led_top" -- entity does 
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/code/Max10/audio1/audio_top.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/code/Max10/audio1/audio_top.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/code/Max10/audio1/audio_top.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/code/Max10/audio1/audio_top.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/code/Max10/audio1/audio_top.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/code/Max10/audio1/audio_top.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/code/Max10/audio1/audio_top.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/code/Max10/audio1/audio_top.v Line: 4
-Info (21057): Implemented 784 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/code/Max10/audio1/audio_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/code/Max10/audio1/audio_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/code/Max10/audio1/audio_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/code/Max10/audio1/audio_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/code/Max10/audio1/audio_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/code/Max10/audio1/audio_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/code/Max10/audio1/audio_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/code/Max10/audio1/audio_top.v Line: 6
+Info (21057): Implemented 677 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 698 logic cells
-    Info (21064): Implemented 56 RAM segments
+    Info (21061): Implemented 607 logic cells
+    Info (21064): Implemented 40 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 126 warnings
-    Info: Peak virtual memory: 4930 megabytes
-    Info: Processing ended: Tue Sep 14 18:19:07 2021
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:39
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 128 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Tue Sep 14 22:16:54 2021
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:34
 
 

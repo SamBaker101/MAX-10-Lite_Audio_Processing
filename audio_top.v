@@ -1,4 +1,6 @@
-module audio_top (
+module audio_top 
+	#(parameter RESOLUTION = 24)
+(
 	input SYS_CLK,
 	input GPIO3, 
 	input [9:0] SW,
@@ -10,7 +12,7 @@ module audio_top (
 	
 wire MCLK, LRCK, SCLK, data_CLK, locked;
 wire test_clk;
-wire [31:0] data_L_in, data_R_in, data_L_out, data_R_out;
+wire [RESOLUTION-1:0] data_L_in, data_R_in, data_L_out, data_R_out;
 
 reg reset = 1'b0;
 
@@ -30,33 +32,34 @@ clock_div #(6400000) clk3 (MCLK, reset, test_clk);												//Test_clock
 
 
 // A/D & D/A data
-wire [31:0] data_L, data_R;
+wire [RESOLUTION-1:0] data_L, data_R;
 
-i2s_decode #(32) dec (.SCLK(SCLK), .LRCK(LRCK), .data_in(GPIO3), .data_out_L(data_L_in), .data_out_R(data_R_in));
-i2s_encode #(32) enc (.SCLK(SCLK), .LRCK(LRCK), .data_in_L(data_L_out), .data_in_R(data_R_out), .data_out(GPIO4));
+i2s_decode #(RESOLUTION) dec (.SCLK(SCLK), .LRCK(LRCK), .data_in(GPIO3), .data_out_L(data_L_in), .data_out_R(data_R_in));
+i2s_encode #(RESOLUTION) enc (.SCLK(SCLK), .LRCK(LRCK), .data_in_L(data_L_out), .data_in_R(data_R_out), .data_out(GPIO4));
 
-wire [31:0] L2, R2;
-flip_flop_data #(32) bp1 (.clk(!data_CLK), .data_in(L2), .data_out(data_L_out));
-flip_flop_data #(32) bp2 (.clk(!data_CLK), .data_in(R2), .data_out(data_R_out));
+wire [RESOLUTION-1:0] L2, R2;
+flip_flop_data #(RESOLUTION) bp1 (.clk(!data_CLK), .data_in(L2), .data_out(data_L_out));
+flip_flop_data #(RESOLUTION) bp2 (.clk(!data_CLK), .data_in(R2), .data_out(data_R_out));
 
 	
 //Filters and Effects
 
 //Clipping - Bit shifts data left by 1 causing increased volume and distortion
-clipping #(32) clipL (.clk(data_CLK), .enable(SW[0]), .data_in(data_L_in), .data_out(L1));
-clipping #(32) clipR (.clk(data_CLK), .enable(SW[0]), .data_in(data_R_in), .data_out(R1));
+clipping #(RESOLUTION) clipL (.clk(data_CLK), .enable(SW[0]), .data_in(data_L_in), .data_out(L1));
+clipping #(RESOLUTION) clipR (.clk(data_CLK), .enable(SW[0]), .data_in(data_R_in), .data_out(R1));
 
 //Echo
-wire [31:0] L1, R1;
-echo #(.RESOLUTION(32), .DEPTH(1024)) eL (.clk(data_CLK), .enable(SW[1]), .data_in(L1), .data_out(L2));
-echo #(.RESOLUTION(32), .DEPTH(1024)) eR (.clk(data_CLK), .enable(SW[1]), .data_in(R1), .data_out(R2));
+wire [RESOLUTION-1:0] L1, R1;
+echo #(.RESOLUTION(RESOLUTION), .DEPTH(1024)) eL (.clk(data_CLK), .enable(SW[1]), .data_in(L1), .data_out(L2));
+echo #(.RESOLUTION(RESOLUTION), .DEPTH(1024)) eR (.clk(data_CLK), .enable(SW[1]), .data_in(R1), .data_out(R2));
 
 
 //TESTS
 //assign LEDR[0] = test_clk;
 //assign LEDR[1] = locked;
 //assign GPIO4 = GPIO3;                                                             //direct bypass test
-assign LEDR[9:0] = data_L_in[31:22];                                                  //data_test
+assign LEDR[9:1] = data_L_in[RESOLUTION-1:RESOLUTION-10];
+assign LEDR[0] =  data_L_in[0];                                                     //data_test sight test
 
 
 

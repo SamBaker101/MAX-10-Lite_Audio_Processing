@@ -17,7 +17,7 @@ always @(negedge SCLK)
 
 	if (LR != LRCK)
 		begin
-		count <= 32'd0;
+		count <= 0;
 		LR <= LRCK;
 		if (LRCK == 0)
 			data_buf <= data_in_L;
@@ -25,7 +25,7 @@ always @(negedge SCLK)
 			data_buf <= data_in_R;
 		end
 	else if (count < RESOLUTION)
-		data_out <= data_buf[count];
+		data_out <= data_buf[RESOLUTION-1-count];
 	
 	end
 endmodule
