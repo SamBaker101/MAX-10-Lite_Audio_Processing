@@ -3,7 +3,10 @@
  
  In preperation for a future project I wanted to set up an environment to experiment with digital signal processing on FPGA. I am using a DE10-Lite FPGA from Altera with a 24 bit I2S based DAC/ADC Pmod from Diligent.
  
- Note that the DAC and ADC used in this program have 24 bit resolution but use a word length of 32. This means each word transmitted has 8 unused bits (at the MSB end). I have kept a 32 bit resolution in the project to simplify the datapath but only 24 are being used.
+ Altera DE10-Lite: https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1021
+ I2S2 PMOD by Diligent: https://digilent.com/reference/pmod/pmodi2s2/reference-manual?redirect=1
+ 
+The DAC/ADC uses a 22.579MHz master clock which is divided by 8 to provide a 2.822MHz serial clock. The I2S interface uses a 32-bit word length and switches between sending a words for the left and right audio channels. This means the sample frequency is 44.099kHz (2822kHz/64).
  
  # Modules 
  
@@ -13,6 +16,8 @@
  
  Encode - Takes audio data and outputs I2S bitstream 
  
- Flip_Flop_Data - Delays output by one sample (62 microseconds) to allow signal time to travel through circuit
+ Flip_Flop_Data - Delays output by one sample (22 microseconds) to allow signal time to travel through circuit
  
  Clipping - Shifts audio sample left by one bit creating distortion 
+ 
+ Echo - adds a delayed sample to the current output sample to create an echo
