@@ -50,8 +50,8 @@ clipping #(RESOLUTION) clipR (.clk(data_CLK), .enable(SW[0]), .data_in(data_R_in
 
 //Echo
 wire [RESOLUTION-1:0] L1, R1;
-echo #(.RESOLUTION(RESOLUTION), .DEPTH(1024)) eL (.clk(data_CLK), .enable(SW[1]), .data_in(L1), .data_out(L2));
-echo #(.RESOLUTION(RESOLUTION), .DEPTH(1024)) eR (.clk(data_CLK), .enable(SW[1]), .data_in(R1), .data_out(R2));
+echo #(.RESOLUTION(RESOLUTION), .DEPTH(4096)) eL (.clk(data_CLK), .enable(SW[1]), .data_in(L1), .data_out(L2));
+echo #(.RESOLUTION(RESOLUTION), .DEPTH(4096)) eR (.clk(data_CLK), .enable(SW[1]), .data_in(R1), .data_out(R2));
 
 
 //TESTS

@@ -1,15 +1,15 @@
-Analysis & Synthesis Status : Successful - Tue Sep 14 22:16:54 2021
+Analysis & Synthesis Status : Successful - Tue Sep 14 22:46:01 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : audio1
 Top-level Entity Name : audio_top
 Family : MAX 10
-Total logic elements : 607
-    Total combinational functions : 461
-    Dedicated logic registers : 432
-Total registers : 432
+Total logic elements : 608
+    Total combinational functions : 462
+    Dedicated logic registers : 434
+Total registers : 434
 Total pins : 29
 Total virtual pins : 0
-Total memory bits : 40,880
+Total memory bits : 180,136
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 1
 UFM blocks : 0
