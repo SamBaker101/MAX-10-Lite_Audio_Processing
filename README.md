@@ -4,6 +4,7 @@
  In preperation for a future project I wanted to set up an environment to experiment with digital signal processing on FPGA. I am using a DE10-Lite FPGA from Altera with a 24 bit I2S based DAC/ADC Pmod from Diligent.
  
  Altera DE10-Lite: https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1021
+ 
  I2S2 PMOD by Diligent: https://digilent.com/reference/pmod/pmodi2s2/reference-manual?redirect=1
  
 The DAC/ADC uses a 22.579MHz master clock which is divided by 8 to provide a 2.822MHz serial clock. The I2S interface uses a 32-bit word length and switches between sending a words for the left and right audio channels. This means the sample frequency is 44.099kHz (2822kHz/64).
