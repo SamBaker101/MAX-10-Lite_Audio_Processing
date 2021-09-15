@@ -1,5 +1,5 @@
 Analysis & Synthesis report for audio1
-Wed Sep 15 11:01:16 2021
+Wed Sep 15 12:40:17 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -70,15 +70,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 15 11:01:16 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 15 12:40:17 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; audio1                                      ;
 ; Top-level Entity Name              ; audio_top                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 608                                         ;
+; Total logic elements               ; 612                                         ;
 ;     Total combinational functions  ; 462                                         ;
-;     Dedicated logic registers      ; 434                                         ;
-; Total registers                    ; 434                                         ;
+;     Dedicated logic registers      ; 482                                         ;
+; Total registers                    ; 482                                         ;
 ; Total pins                         ; 29                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 180,136                                     ;
@@ -188,7 +188,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -229,20 +230,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 608                    ;
+; Estimated Total logic elements              ; 612                    ;
 ;                                             ;                        ;
 ; Total combinational functions               ; 462                    ;
 ; Logic element usage by number of LUT inputs ;                        ;
 ;     -- 4 input functions                    ; 134                    ;
-;     -- 3 input functions                    ; 124                    ;
-;     -- <=2 input functions                  ; 204                    ;
+;     -- 3 input functions                    ; 120                    ;
+;     -- <=2 input functions                  ; 208                    ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
 ;     -- normal mode                          ; 240                    ;
 ;     -- arithmetic mode                      ; 222                    ;
 ;                                             ;                        ;
-; Total registers                             ; 434                    ;
-;     -- Dedicated logic registers            ; 434                    ;
+; Total registers                             ; 482                    ;
+;     -- Dedicated logic registers            ; 482                    ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
 ; I/O pins                                    ; 29                     ;
@@ -253,10 +254,10 @@ refer to the applicable agreement for further details.
 ; Total PLLs                                  ; 1                      ;
 ;     -- PLLs                                 ; 1                      ;
 ;                                             ;                        ;
-; Maximum fan-out node                        ; clock_div:clk0|div_clk ;
-; Maximum fan-out                             ; 246                    ;
-; Total fan-out                               ; 3206                   ;
-; Average fan-out                             ; 3.21                   ;
+; Maximum fan-out node                        ; clock_div:clk1|div_clk ;
+; Maximum fan-out                             ; 248                    ;
+; Total fan-out                               ; 3298                   ;
+; Average fan-out                             ; 3.15                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -265,18 +266,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                   ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |audio_top                                   ; 462 (0)             ; 434 (0)                   ; 180136      ; 0          ; 0            ; 0       ; 0         ; 29   ; 0            ; 0          ; |audio_top                                                                                                            ; audio_top       ; work         ;
+; |audio_top                                   ; 462 (0)             ; 482 (0)                   ; 180136      ; 0          ; 0            ; 0       ; 0         ; 29   ; 0            ; 0          ; |audio_top                                                                                                            ; audio_top       ; work         ;
 ;    |PLL:PL0|                                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|PLL:PL0                                                                                                    ; PLL             ; work         ;
 ;       |altpll:altpll_component|              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|PLL:PL0|altpll:altpll_component                                                                            ; altpll          ; work         ;
 ;          |PLL_altpll:auto_generated|         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|PLL:PL0|altpll:altpll_component|PLL_altpll:auto_generated                                                  ; PLL_altpll      ; work         ;
 ;    |clock_div:clk0|                          ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|clock_div:clk0                                                                                             ; clock_div       ; work         ;
 ;    |clock_div:clk1|                          ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|clock_div:clk1                                                                                             ; clock_div       ; work         ;
 ;    |clock_div:clk2|                          ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|clock_div:clk2                                                                                             ; clock_div       ; work         ;
-;    |effects:eL1|                             ; 46 (0)              ; 24 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eL1                                                                                                ; effects         ; work         ;
-;       |clipping:clipL|                       ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eL1|clipping:clipL                                                                                 ; clipping        ; work         ;
+;    |effects:eL1|                             ; 46 (0)              ; 48 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eL1                                                                                                ; effects         ; work         ;
+;       |clipping:clipL|                       ; 24 (24)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eL1|clipping:clipL                                                                                 ; clipping        ; work         ;
 ;       |echo:eL|                              ; 22 (22)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eL1|echo:eL                                                                                        ; echo            ; work         ;
-;    |effects:eR1|                             ; 75 (0)              ; 36 (0)                    ; 180136      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eR1                                                                                                ; effects         ; work         ;
-;       |clipping:clipL|                       ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eR1|clipping:clipL                                                                                 ; clipping        ; work         ;
+;    |effects:eR1|                             ; 75 (0)              ; 60 (0)                    ; 180136      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eR1                                                                                                ; effects         ; work         ;
+;       |clipping:clipL|                       ; 24 (24)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eR1|clipping:clipL                                                                                 ; clipping        ; work         ;
 ;       |echo:eL|                              ; 51 (22)             ; 36 (24)                   ; 180136      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eR1|echo:eL                                                                                        ; echo            ; work         ;
 ;          |altshift_taps:buffer_rtl_0|        ; 29 (0)              ; 12 (0)                    ; 180136      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eR1|echo:eL|altshift_taps:buffer_rtl_0                                                             ; altshift_taps   ; work         ;
 ;             |shift_taps_g7m:auto_generated|  ; 29 (0)              ; 12 (0)                    ; 180136      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_top|effects:eR1|echo:eL|altshift_taps:buffer_rtl_0|shift_taps_g7m:auto_generated                               ; shift_taps_g7m  ; work         ;
@@ -314,7 +315,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 434   ;
+; Total registers                              ; 482   ;
 ; Number of registers using Synchronous Clear  ; 152   ;
 ; Number of registers using Synchronous Load   ; 44    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -793,6 +794,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; RESOLUTION     ; 24    ; Signed Integer                                 ;
+; SHIFT          ; 6     ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -824,6 +826,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; RESOLUTION     ; 24    ; Signed Integer                                 ;
+; SHIFT          ; 6     ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -967,11 +970,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 29                          ;
-; cycloneiii_ff         ; 434                         ;
+; cycloneiii_ff         ; 482                         ;
 ;     ENA               ; 86                          ;
 ;     SCLR              ; 152                         ;
 ;     SLD               ; 44                          ;
-;     plain             ; 152                         ;
+;     plain             ; 200                         ;
 ; cycloneiii_lcell_comb ; 463                         ;
 ;     arith             ; 222                         ;
 ;         2 data inputs ; 180                         ;
@@ -979,14 +982,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     normal            ; 241                         ;
 ;         0 data inputs ; 3                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 82                          ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 78                          ;
 ;         4 data inputs ; 134                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 44                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.10                        ;
-; Average LUT depth     ; 3.18                        ;
+; Average LUT depth     ; 2.90                        ;
 +-----------------------+-----------------------------+
 
 
@@ -995,7 +998,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:18     ;
+; Top            ; 00:00:20     ;
 +----------------+--------------+
 
 
@@ -1005,7 +1008,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Sep 15 11:00:36 2021
+    Info: Processing started: Wed Sep 15 12:39:33 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off audio1 -c audio1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1255,9 +1258,9 @@ Info (21057): Implemented 686 device resources after synthesis - the final resou
     Info (21064): Implemented 44 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 128 warnings
-    Info: Peak virtual memory: 5359 megabytes
-    Info: Processing ended: Wed Sep 15 11:01:16 2021
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:00:52
+    Info: Peak virtual memory: 5373 megabytes
+    Info: Processing ended: Wed Sep 15 12:40:17 2021
+    Info: Elapsed time: 00:00:44
+    Info: Total CPU time (on all processors): 00:01:01
 
 
