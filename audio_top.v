@@ -31,28 +31,17 @@ clock_div #(6400000) clk3 (MCLK, reset, test_clk);												//Test_clock
 
 
 
-// A/D & D/A data
-wire [RESOLUTION-1:0] data_L, data_R;
+// Data Path
+i2s_decode #(.RESOLUTION(RESOLUTION)) dec (.SCLK(SCLK), .LRCK(LRCK), .data_in(GPIO3), .data_out_L(data_L_in), .data_out_R(data_R_in));
 
-i2s_decode #(RESOLUTION) dec (.SCLK(SCLK), .LRCK(LRCK), .data_in(GPIO3), .data_out_L(data_L_in), .data_out_R(data_R_in));
-i2s_encode #(RESOLUTION) enc (.SCLK(SCLK), .LRCK(LRCK), .data_in_L(data_L_out), .data_in_R(data_R_out), .data_out(GPIO4));
+wire [RESOLUTION-1:0] effects_L_out, effects_R_out;
+effects #(.RESOLUTION(RESOLUTION)) eL1 (.data_CLK(data_CLK), .SW(SW), .data_in(data_R_in), .data_out(effects_L_out));
+effects #(.RESOLUTION(RESOLUTION)) eR1 (.data_CLK(data_CLK), .SW(SW), .data_in(data_L_in), .data_out(effects_R_out));
 
-wire [RESOLUTION-1:0] L2, R2;
-flip_flop_data #(RESOLUTION) bp1 (.clk(!data_CLK), .data_in(L2), .data_out(data_L_out));
-flip_flop_data #(RESOLUTION) bp2 (.clk(!data_CLK), .data_in(R2), .data_out(data_R_out));
+flip_flop_data #(.RESOLUTION(RESOLUTION)) bp1 (.clk(!data_CLK), .data_in(effects_L_out), .data_out(data_L_out));
+flip_flop_data #(.RESOLUTION(RESOLUTION)) bp2 (.clk(!data_CLK), .data_in(effects_R_out), .data_out(data_R_out));
 
-	
-//Filters and Effects
-
-//Clipping - Bit shifts data left by 1 causing increased volume and distortion
-clipping #(RESOLUTION) clipL (.clk(data_CLK), .enable(SW[0]), .data_in(data_L_in), .data_out(L1));
-clipping #(RESOLUTION) clipR (.clk(data_CLK), .enable(SW[0]), .data_in(data_R_in), .data_out(R1));
-
-//Echo
-wire [RESOLUTION-1:0] L1, R1;
-echo #(.RESOLUTION(RESOLUTION), .DEPTH(4096)) eL (.clk(data_CLK), .enable(SW[1]), .data_in(L1), .data_out(L2));
-echo #(.RESOLUTION(RESOLUTION), .DEPTH(4096)) eR (.clk(data_CLK), .enable(SW[1]), .data_in(R1), .data_out(R2));
-
+i2s_encode #(.RESOLUTION(RESOLUTION)) enc (.SCLK(SCLK), .LRCK(LRCK), .data_in_L(data_L_out), .data_in_R(data_R_out), .data_out(GPIO4));
 
 //TESTS
 //assign LEDR[0] = test_clk;

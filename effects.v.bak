@@ -1,0 +1,7 @@
+module effects
+	#(parameter RESOLUTION = 24)
+	(
+	input data_CLK,
+	input [RESOLUTION-1:0] data_in,
+	output [RESOLUTION-1:0] data_out
+	);
