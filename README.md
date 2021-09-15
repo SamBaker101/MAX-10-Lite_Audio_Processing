@@ -19,6 +19,8 @@ The DAC/ADC uses a 22.579MHz master clock which is divided by 8 to provide a 2.8
  
  Flip_Flop_Data - Delays output by one sample (22 microseconds) to allow signal time to travel through circuit
  
+ Effects - Handles instantiation and datapath for effects modules to simplify top level
+ 
  Clipping - Shifts audio sample left by one bit creating distortion 
  
  Echo - adds a delayed sample to the current output sample to create an echo
